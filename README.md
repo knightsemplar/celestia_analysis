@@ -5,15 +5,10 @@ This is a tool for setting up and performing analysis on a Celestia Light Node. 
 **Software used:**
 
 -Celestia Node 
-
 -Docker
-
 -Node_Exporter
-
 -Otel Collector
-
 -Prometheus
-
 -Grafana
 
 Stack:
@@ -54,9 +49,6 @@ This will automatically set up and run a Celestia Light Node with a new wallet a
 
 # Setup OpenTelemetry Collector in Ubuntu
 
-In the project directory go to the openTelemetry directory. Here you will find a
-script named setup-script.sh. Run that script.
-
 Go inside the celestia_analysis/openTelemetry directory, make the script executable and run the script:
 
 `cd && cd celestia_analysis/openTelemetry && chmod +x setup-script.sh && ./setup-script.sh`
@@ -65,7 +57,7 @@ When the setup is completed successfully, you will see the output that the servi
 
 # Setup Prometheus, Grafana, and Node Exporter
 
-Go to the project directory celestia_analysis/prometheus, if run ubuntu from any cloud provider then you have public a IP. If you run in local
+Go to the project directory celestia_analysis/prometheus, if run you are running ubuntu from any cloud provider then you have public a IP. If you run from a local machine
 then you have an IP of localhost or 127.0.0.1. Provide your host IP in the prometheus.yml file instead of the placeholder (Insert-Your-IP). Write out and exit.
 
 `cd && cd celestia_analysis/prometheus && nano prometheus.yml`
@@ -104,5 +96,4 @@ You can change it from project directory .env file
 2. https://github.com/GLCNI/celestia-node-scripts/tree/main/multi-network#readme
 3. https://github.com/GLCNI/celestia-node-scripts/blob/main/multi-network/monitoring/prom
 etheus/README.md
-10
 
