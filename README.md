@@ -49,86 +49,34 @@ Clone the repo:
 In the project directory go inside into the celestialight directory. Here you will find a
 sciprt named setup-script.sh. Run that script.
 
-1. Go inside the celestialight directory
+Go inside the celestialight directory, make the script executable and run:
 
-`cd celestia_analysis/celestialight`
+`cd celestia_analysis/celestialight && chmod +x celestia-light-auto.sh && ./celestia-light-auto.sh`
 
-`chmod +x celestia-light-auto.sh`
+This is automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search my_celes_key). Be aware: this can take a while. 
 
-`./celestia-light-auto.sh`
-
-This is automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search myceles).
-
-2. Run script-1
-
-`chmod +x setup-script-1.sh`
-
-`./setup-script-1.sh`
-
-3. You will be asked for some prompts in the terminal.
-
-- Press 2 for selecting blockspacerace
-- Press 1 for default
-- Press 1 for auto generated wallet
-- Enter
-- Press y for showing the logs.
-
-4. Run script-2
-
-Make executable
-
-`chmod +x setup-script-2.sh`
-
-Run
-
-`./setup-script-2.sh`
-
-5. When the setup is completed successfully, you will see an output that the service is active and running.
 
 # Setup OpenTelemetry Collector in Ubuntu
 
 In the project directory go to the openTelemetry directory. Here you will find a
 script named setup-script.sh. Run that script.
 
-1. Go inside the celestia_analysis/openTelemetry directory
+Go inside the celestia_analysis/openTelemetry directory, make the script executable and run the script:
 
-`cd`
+`cd && cd celestia_analysis/openTelemetry && chmod +x setup-script.sh && ./setup-script.sh`
 
-`cd celestia_analysis/openTelemetry`
-
-2. Run script
-
-Make executable
-
-`chmod +x setup-script.sh`
-
-`./setup-script.sh`
-
-3. When the setup will be completed successfully, you will show the output the
-service is active and running.
+When the setup is completed successfully, you will see the output that the service is active and running.
 
 # Setup Prometheus, Grafana, and Node Exporter
 
-1. Go to the project directory celestia_analysis/prometheus
+Go to the project directory celestia_analysis/prometheus, if run ubuntu from any cloud provider then you have public a IP. If you run in local
+then you have an IP of localhost or 127.0.0.1. Provide your host IP in the prometheus.yml file instead of the placeholder (Insert-Your-IP). Write out and exit.
 
-`cd`
+`cd && cd celestia_analysis/prometheus && nano prometheus.yml`
 
-`cd celestia_analysis/prometheus`
+Now you have to run all of the necessary containers in docker. Run this command and check the running containers:
 
-2. If run ubuntu from any cloud provider then you have public IP. If you run in local
-then you have localhost or 127.0.0.1 IP. Provide that IP in prometheus.yml file instead of
-the placeholder (Insert-Your-IP).
-
-`nano prometheus.yml`
-
-
-3. Now you have to run all of the necessary containers in docker. Run this command.
-
-`docker-compose up -d`
-
-4. Check the running containers
-
-`docker ps`
+`docker-compose up -d && docker ps`
 
 Now you will see all of the containers are running.
 
@@ -151,7 +99,7 @@ Password: admin
 You can change it from project directory .env file
 
 
-# Screen Capture of Celestia Dashboard
+# Screenshot of Celestia Dashboard
 
 ![image](https://github.com/knightsemplar/celestia_analysis/assets/81700275/c824bd46-f92f-4010-b015-726f2e32d6bb)
 
