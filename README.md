@@ -121,13 +121,13 @@ service is active and running.
 
 1. Go to the project directory celestia_analysis
 
-`cd ..`
+`cd celestia_analysis`
 
 2. If run ubuntu from any cloud provider then you have public IP. If you run in local
 then you have localhost or 127.0.0.1 IP. Provide that IP in prometheus.yml file instead of
 the placeholder (Insert-Your-IP).
 
-`nano prometheus/prometheus.yml`
+`nano prometheus.yml`
 
 
 3. Now you have to run all of the necessary containers in docker. Run this command.
