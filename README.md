@@ -45,15 +45,11 @@ Clone the repo:
 
 `git clone https://github.com/knightsemplar/celestia_analysis`
 
-
-In the project directory go inside into the celestialight directory. Here you will find a
-sciprt named setup-script.sh. Run that script.
-
 Go inside the celestialight directory, make the script executable and run:
 
 `cd celestia_analysis/celestialight && chmod +x celestia-light-auto.sh && ./celestia-light-auto.sh`
 
-This is automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search my_celes_key). Be aware: this can take a while. 
+This will automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search my_celes_key). Be aware: this can take a while. 
 
 
 # Setup OpenTelemetry Collector in Ubuntu
