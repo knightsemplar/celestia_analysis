@@ -5,10 +5,15 @@ This is a tool for setting up and performing analysis on a Celestia Light Node. 
 **Software used:**
 
 -Celestia Node 
+
 -Docker
+
 -Node_Exporter
+
 -Otel Collector
+
 -Prometheus
+
 -Grafana
 
 Stack:
