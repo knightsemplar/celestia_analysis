@@ -120,6 +120,8 @@ script named setup-script.sh. Run that script.
 
 1. Go inside the celestia_analysis/openTelemetry directory
 
+`cd`
+
 `cd celestia_analysis/openTelemetry`
 
 2. Run script
@@ -136,6 +138,8 @@ service is active and running.
 # Setup Prometheus, Grafana, and Node Exporter
 
 1. Go to the project directory celestia_analysis/prometheus
+
+`cd`
 
 `cd celestia_analysis/prometheus`
 
