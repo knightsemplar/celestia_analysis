@@ -48,6 +48,7 @@ repository over HTTPS
 # Install Docker Engine in Ubuntu
 
 1. Update the apt package index:
+
 `sudo apt-get update`
 
 2. Install Docker Engine, containerd, and Docker Compose
