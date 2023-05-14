@@ -885,10 +885,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "expr": "count(count(node_cpu_seconds_total{instance=~\"$host\"}) by (cpu))",
+          "editorMode": "code",
+          "expr": "count(count(node_cpu_seconds_total) by (cpu))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -967,7 +969,8 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "expr": "node_memory_MemTotal_bytes{instance=~\"$host\"}",
+          "editorMode": "code",
+          "expr": "node_memory_MemTotal_bytes",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
@@ -1051,7 +1054,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "node_filesystem_size_bytes{device=\"/dev/root\", fstype=\"ext4\", instance=\"nodeexporter:9100\", job=\"node-exporter\", mountpoint=\"/\"}",
+          "expr": "node_filesystem_size_bytes{fstype=\"ext4\", instance=\"nodeexporter:9100\", job=\"node-exporter\", mountpoint=\"/\"}",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
@@ -1134,10 +1137,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "expr": "sum(increase(node_network_receive_bytes_total{instance=~\"$host\"}[24h]))",
+          "editorMode": "code",
+          "expr": "sum(increase(node_network_receive_bytes_total[24h]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -1306,10 +1311,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "expr": "1 - node_memory_MemFree_bytes{instance=~\"$host\"} / node_memory_MemTotal_bytes{instance=~\"$host\"}",
+          "editorMode": "code",
+          "expr": "1 - node_memory_MemFree_bytes / node_memory_MemTotal_bytes",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -1393,7 +1400,8 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "expr": "1 - (sum(node_filesystem_free_bytes{instance=~\"$host\"}) / sum(node_filesystem_size_bytes{instance=~\"$host\"}))",
+          "editorMode": "code",
+          "expr": "1 - (sum(node_filesystem_free_bytes) / sum(node_filesystem_size_bytes))",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -1476,10 +1484,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "expr": "sum(increase(node_network_transmit_bytes_total{instance=~\"$host\"}[24h]))",
+          "editorMode": "code",
+          "expr": "sum(increase(node_network_transmit_bytes_total[24h]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -1503,6 +1513,6 @@
   "timezone": "",
   "title": "Celestia DS KS",
   "uid": "2enmpKUVz",
-  "version": 5,
+  "version": 4,
   "weekStart": ""
 }
