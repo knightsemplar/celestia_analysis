@@ -46,7 +46,7 @@ cd celestia-node/
 if [ "$NETWORK" == "mocha" ]; then
     CELESTIA_VER="v0.6.4"
 elif [ "$NETWORK" == "blockspacerace" ]; then
-    CELESTIA_VER="v0.9.2"
+    CELESTIA_VER="v0.9.4"
 elif [ "$NETWORK" == "arabica" ]; then
     CELESTIA_VER="v0.7.1"
 fi
@@ -103,7 +103,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which celestia) light start --keyring.accname $WALLET --p2p.network $NETWORK --core.ip $RPC_ENDPOINT --gateway --gateway.addr localhost
+ExecStart=$(which celestia) light start --keyring.accname $WALLET --p2p.network $NETWORK --core.ip $RPC_ENDPOINT --gateway --gateway.addr localhost --metrics --metrics.tls=false --metrics.endpoint 0.0.0.0:4318
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096
