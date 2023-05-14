@@ -85,6 +85,8 @@ sciprt named setup-script.sh. Run that script.
 
 `./celestia-light-auto.sh`
 
+This is automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search myceles).
+
 2. Run script-1
 
 `chmod +x setup-script-1.sh`
