@@ -102,13 +102,15 @@ sciprt named setup-script.sh. Run that script.
 In the project directory go to the openTelemetry directory. Here you will find a
 sciprt named setup-script.sh. Run that script.
 
-1. Go inside the celestialight directory
+1. Go inside the celestia_analysis directory
 
-`cd ..`
+`cd celestia_analysis`
 
 `cd openTelemetry`
 
 2. Run script
+
+Make executable
 
 `chmod +x setup-script.sh`
 
