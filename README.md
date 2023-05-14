@@ -160,9 +160,13 @@ http://your-server-public-ip:3000
 http://localhost:3000
 
 - Credentials of Grafana
+
 Username: admin
+
 Password: admin
+
 You can change it from project directory .env file
+
 
 # Screen Capture of Celestia Dashboard
 
