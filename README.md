@@ -24,31 +24,18 @@ Stack:
 
 # Setup Docker in Ubuntu
 Set up the repository
-1. Update the apt package index and install packages to allow apt to use a repository over HTTPS
-2. Add Docker’s official GPG key:
-3. Set up the repository:
+1. Update the apt package index and install packages to allow apt to use a repository over HTTPS, add Docker’s official GPG key and set up the repository:
 
 ```sudo apt-get update && sudo apt-get install ca-certificates curl gnupg -y && sudo install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg && sudo chmod a+r /etc/apt/keyrings/docker.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null```
 
 # Install Docker Engine in Ubuntu
 
-1. Update the apt package index:
+The below command installs Docker Engine, containerd, Docker Buildx plugin, and Docker Compose.
+Downloads and installs Docker Compose binary.
+Adds the ubuntu user to the docker group to allow Docker commands without sudo.
+You may need to log out (`exit`) and log back in for the group membership to take effect.
 
-`sudo apt-get update`
-
-2. Install Docker Engine, containerd, and Docker Compose
-
-`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
-
-3. Install docker-compose
-
-`sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose; sudo chmod +x /usr/local/bin/docker-compose`
-
-4. Add ubuntu user in docker group
-
-`sudo usermod -aG docker ubuntu`
-
-`exit`
+```sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && sudo usermod -aG docker ubuntu```
 
 Now login again to the VM
 
@@ -62,7 +49,7 @@ Clone the repo:
 In the project directory go inside into the celestialight directory. Here you will find a
 sciprt named setup-script.sh. Run that script.
 
-1. Go inside the celestiaLight direcotry
+1. Go inside the celestialight directory
 
 `cd celestia_analysis/celestialight`
 
