@@ -68,6 +68,11 @@ Now login again to the VM
 
 # Setup Celestia Light Node in Ubuntu
 
+Clone the repo:
+
+`git clone [https://github.com/knightsemplar/Celestia-Analysis](https://github.com/knightsemplar/Celestia-Analysis)`
+
+
 In the project directory go inside into the celestiaLight directory. Here you will find a
 sciprt named setup-script.sh. Run that script.
 
