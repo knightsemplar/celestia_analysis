@@ -73,14 +73,16 @@ Clone the repo:
 `git clone https://github.com/knightsemplar/celestia_analysis`
 
 
-In the project directory go inside into the celestiaLight directory. Here you will find a
+In the project directory go inside into the celestialight directory. Here you will find a
 sciprt named setup-script.sh. Run that script.
 
 1. Go inside the celestiaLight direcotry
 
-`cd celestiaLight`
+`cd celestia_analysis/celestialight`
 
 2. Run script-1
+
+`chmod +x setup-script-1.sh`
 
 `./setup-script-1.sh`
 
@@ -89,9 +91,16 @@ sciprt named setup-script.sh. Run that script.
 - Press 2 for selecting blockspacerace
 - Press 1 for default
 - Press 1 for auto generated wallet
+- Enter
 - Press y for showing the logs.
 
 4. Run script-2
+
+Make executable
+
+`chmod +x setup-script-2.sh`
+
+Run
 
 `./setup-script-2.sh`
 
@@ -100,13 +109,11 @@ sciprt named setup-script.sh. Run that script.
 # Setup OpenTelemetry Collector in Ubuntu
 
 In the project directory go to the openTelemetry directory. Here you will find a
-sciprt named setup-script.sh. Run that script.
+script named setup-script.sh. Run that script.
 
-1. Go inside the celestia_analysis directory
+1. Go inside the celestia_analysis/openTelemetry directory
 
-`cd celestia_analysis`
-
-`cd openTelemetry`
+`cd celestia_analysis/openTelemetry`
 
 2. Run script
 
@@ -121,9 +128,9 @@ service is active and running.
 
 # Setup Prometheus, Grafana, and Node Exporter
 
-1. Go to the project directory celestia_analysis
+1. Go to the project directory celestia_analysis/prometheus
 
-`cd celestia_analysis`
+`cd celestia_analysis/prometheus`
 
 2. If run ubuntu from any cloud provider then you have public IP. If you run in local
 then you have localhost or 127.0.0.1 IP. Provide that IP in prometheus.yml file instead of
