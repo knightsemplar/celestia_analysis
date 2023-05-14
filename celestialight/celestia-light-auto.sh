@@ -86,37 +86,43 @@ fi
 WALLET="my_celes_key" # Selecting auto-generated wallet automatically
 echo "export WALLET=$WALLET" >> $HOME/.bash_profile
 
-#display wallet info or import existing
+# Display wallet info or import existing
 if [ "$WALLET" == "my_celes_key" ]; then
-    ./cel-key list --node.type
+    ./cel-key list --node.type light --p2p.network $NETWORK --keyring-backend test
+    echo "To pay for data transactions, this address must be funded. Press any key to continue."
+    read -n 1 -r -s -p ""
+else
+    ./cel-key add $WALLET --keyring-backend test --node.type light --p2p.network $NETWORK --recover
+fi
 
-#SETUP SYSTEM SERVICE 
+# Setup system service
 sudo tee <<EOF >/dev/null /etc/systemd/system/celestia-light.service
 [Unit]
 Description=celestia-light Cosmos daemon
 After=network-online.target
+
 [Service]
 User=$USER
-ExecStart=$(which celestia) light start --keyring.accname $WALLET --p2p.network $NETWORK --core.ip $RPC_ENDPOINT --gateway --gateway.addr localhost 
+ExecStart=$(which celestia) light start --keyring.accname $WALLET --p2p.network $NETWORK --core.ip $RPC_ENDPOINT --gateway --gateway.addr localhost
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096
+
 [Install]
 WantedBy=multi-user.target
 EOF
 
-#start the service
+# Start the service
 sudo systemctl daemon-reload
 sudo systemctl enable celestia-light
 sudo systemctl start celestia-light
 
-#display logs 
-echo "celestia light node is now setup and running"
-echo "you can display logs at any time with 'journalctl -u celestia-light.service -f'"
-echo -n "press y to display logs on the terminal (otherwise press enter ) > "
+# Display logs
+echo "Celestia light node is now setup and running."
+echo "You can display logs at any time with 'journalctl -u celestia-light.service -f'."
+echo -n "Press 'y' to display logs on the terminal (otherwise press Enter): "
 read displaylogs
 echo
-if test "$displaylogs" == "y"
-then
+if [ "$displaylogs" == "y" ]; then
     journalctl -u celestia-light.service -f
 fi
