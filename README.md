@@ -110,6 +110,8 @@ sciprt named setup-script.sh. Run that script.
 
 2. Run script
 
+`chmod +x setup-script.sh`
+
 `./setup-script.sh`
 
 3. When the setup will be completed successfully, you will show the output the
