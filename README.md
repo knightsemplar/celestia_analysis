@@ -16,7 +16,8 @@ This is a tool for setting up and performing analysis on a Celestia Light Node. 
 
 -Grafana
 
-Stack:
+
+**Stack:**
 
 ![image](https://github.com/knightsemplar/celestia_analysis/assets/81700275/9ab763d3-a659-4c92-92c9-97a362795c79)
 
