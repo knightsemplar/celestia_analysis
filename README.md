@@ -70,7 +70,7 @@ Now login again to the VM
 
 Clone the repo:
 
-`git clone https://github.com/knightsemplar/Celestia-Analysis`
+`git clone https://github.com/knightsemplar/celestia_analysis`
 
 
 In the project directory go inside into the celestiaLight directory. Here you will find a
