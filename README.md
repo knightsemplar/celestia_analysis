@@ -83,7 +83,7 @@ sciprt named setup-script.sh. Run that script.
 
 `chmod +x celestia-light-auto.sh`
 
-`celestia-light-auto.sh`
+`./celestia-light-auto.sh`
 
 2. Run script-1
 
