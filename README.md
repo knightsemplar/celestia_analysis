@@ -99,6 +99,8 @@ Password: admin
 
 You can change it from project directory .env file
 
+There will be three dashboards available to choose from, the first showing combined basic analysis. The second two offer more technical system analysis. 
+
 
 # Screenshot of Celestia Dashboard
 
