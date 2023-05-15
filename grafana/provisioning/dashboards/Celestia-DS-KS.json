@@ -741,7 +741,7 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "continuous-purples"
+            "mode": "thresholds"
           },
           "mappings": [
             {
