@@ -68,7 +68,9 @@ For a more customised set up, please refer to [this article]([url](https://solar
 
 Go inside the celestia_analysis/openTelemetry directory, make the script executable and run the script:
 
-`cd && cd celestia_analysis/openTelemetry && chmod +x setup-script.sh && ./setup-script.sh`
+```
+cd && cd celestia_analysis/openTelemetry && chmod +x setup-script.sh && ./setup-script.sh
+```
 
 When the setup is completed successfully, you will see the output that the service is active and running.
 
