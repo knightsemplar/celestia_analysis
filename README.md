@@ -51,7 +51,9 @@ Go inside the celestialight directory, make the script executable and run:
 
 This will automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network, it will also add metrics to allow analysis through Open Telemetry. Be sure to save your passphrase for future reference (search my_celes_key). 
 
-Be aware: this can take a while. For a more customised set up, please refer to the Celestia docs, or a the repo in the resources section. 
+Be aware: this can take a while. 
+
+For a more customised set up, please refer to the Celestia docs, or a the repo in the resources section. 
 
 
 # Setup OpenTelemetry Collector in Ubuntu
