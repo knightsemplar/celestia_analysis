@@ -46,7 +46,7 @@ cd celestia-node/
 if [ "$NETWORK" == "mocha" ]; then
     CELESTIA_VER="v0.6.4"
 elif [ "$NETWORK" == "blockspacerace" ]; then
-    CELESTIA_VER="v0.9.4"
+    CELESTIA_VER="v0.9.3"
 elif [ "$NETWORK" == "arabica" ]; then
     CELESTIA_VER="v0.7.1"
 fi
