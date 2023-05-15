@@ -122,7 +122,5 @@ Here is a more [detailed article of the process](https://open.substack.com/pub/s
 ## References
 1. https://docs.docker.com/engine/install/ubuntu/
 2. https://github.com/GLCNI/celestia-node-scripts/tree/main/multi-network#readme
-3. https://github.com/GLCNI/celestia-node-scripts/blob/main/multi-network/monitoring/prom
-etheus/README.md
-4. https://github.com/P-OPSTeam/celestia-tools/tree/main/grafana
+3. https://github.com/P-OPSTeam/celestia-tools/tree/main/grafana
 
