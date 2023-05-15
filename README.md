@@ -16,6 +16,13 @@ This is a tool for setting up and performing analysis on a Celestia Light Node. 
 
 -Grafana
 
+# Hardware Requirements:
+
+1vCPU / 2GB RAM / 25GB SSD / 56 kbps
+
+OS: Ubuntu Linux 20.04 (LTS) x64
+
+Note: this is the minimum recommended requirement to run this stack.
 
 # Necessary Commands to Setup
 
