@@ -54,17 +54,21 @@ Now login again to the VM
 
 Clone the repo:
 
-`git clone https://github.com/knightsemplar/celestia_analysis`
+```
+git clone https://github.com/knightsemplar/celestia_analysis
+```
 
 Go inside the celestialight directory, make the script executable and run:
 
-`cd celestia_analysis/celestialight && chmod +x celestia-light-auto.sh && ./celestia-light-auto.sh`
+```
+cd celestia_analysis/celestialight && chmod +x celestia-light-auto.sh && ./celestia-light-auto.sh
+```
 
 This will automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network, it will also add metrics to allow analysis through Open Telemetry. Be sure to save your passphrase for future reference (search my_celes_key). 
 
 Be aware: this can take a while. 
 
-For a more customised set up, please refer to the Celestia docs, or a the repo in the resources section. 
+For a more customised set up, please refer to [this article]([url](https://solardefi.substack.com/)), Celestia docs, or a the repo in the resources section. 
 
 
 # Setup OpenTelemetry Collector in Ubuntu
@@ -77,18 +81,11 @@ When the setup is completed successfully, you will see the output that the servi
 
 # Setup Prometheus, Grafana, and Node Exporter
 
-Go to the project directory celestia_analysis/prometheus, if run you are running ubuntu from any cloud provider then you have public a IP. If you run from a local machine
-then you have an IP of localhost or 127.0.0.1. 
-
-Provide your host IP in the prometheus.yml file instead of the placeholder (Insert-Your-IP). 
-
-`cd && cd celestia_analysis/prometheus && nano prometheus.yml`
-
-Write out and exit.
-
 Now you have to run all of the necessary containers in docker. Run this command and check the running containers:
 
-`docker-compose up -d && docker ps`
+```
+docker-compose up -d && docker ps
+```
 
 Now you will see all of the containers are running.
 
@@ -122,4 +119,5 @@ There will be three dashboards available to choose from, the first showing combi
 2. https://github.com/GLCNI/celestia-node-scripts/tree/main/multi-network#readme
 3. https://github.com/GLCNI/celestia-node-scripts/blob/main/multi-network/monitoring/prom
 etheus/README.md
+4. https://solardefi.substack.com/
 
