@@ -61,7 +61,7 @@ This will automatically set up and run a Celestia Light Node with a new wallet a
 
 Be aware: this can take a while. 
 
-For a more customised set up, please refer to [this article]([url](https://solardefi.substack.com/)), Celestia docs, or a the repo in the resources section. 
+For a more customised set up, please refer to [this article]([[url](https://open.substack.com/pub/solardefi/p/celestia-light-node-and-analysis?r=kui57&utm_campaign=post&utm_medium=web)]), Celestia docs, or a the repo in the resources section. 
 
 
 # Setup OpenTelemetry Collector in Ubuntu
