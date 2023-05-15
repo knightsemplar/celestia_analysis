@@ -737,11 +737,11 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "A fully synced node will have the same head and total sampled headers (DAS) or 0 in this field. Anything more means that the node requires some syncing. ",
+      "description": "A fully synced node will have the same head and total sampled headers (DAS). Anything more means that the node requires some syncing. ",
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
+            "mode": "continuous-purples"
           },
           "mappings": [
             {
