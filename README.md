@@ -17,10 +17,6 @@ This is a tool for setting up and performing analysis on a Celestia Light Node. 
 -Grafana
 
 
-**Stack:**
-
-![image](https://github.com/knightsemplar/celestia_analysis/assets/81700275/9ab763d3-a659-4c92-92c9-97a362795c79)
-
 # Necessary Commands to Setup
 
 # Setup Docker in Ubuntu
@@ -32,8 +28,11 @@ Set up the repository
 # Install Docker Engine in Ubuntu
 
 The below command installs Docker Engine, containerd, Docker Buildx plugin, and Docker Compose.
+
 Downloads and installs Docker Compose binary.
+
 Adds the ubuntu user to the docker group to allow Docker commands without sudo.
+
 You may need to log out (`exit`) and log back in for the group membership to take effect.
 
 ```sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && sudo usermod -aG docker ubuntu```
@@ -50,7 +49,9 @@ Go inside the celestialight directory, make the script executable and run:
 
 `cd celestia_analysis/celestialight && chmod +x celestia-light-auto.sh && ./celestia-light-auto.sh`
 
-This will automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search my_celes_key). Be aware: this can take a while. For a more customised set up, please refer to the Celestia docs, or a the repo in the resources section. 
+This will automatically set up and run a Celestia Light Node with a new wallet and default settings on the Blockspacerace network. Be sure to save your passphrase for future reference (search my_celes_key). 
+
+Be aware: this can take a while. For a more customised set up, please refer to the Celestia docs, or a the repo in the resources section. 
 
 
 # Setup OpenTelemetry Collector in Ubuntu
@@ -64,9 +65,13 @@ When the setup is completed successfully, you will see the output that the servi
 # Setup Prometheus, Grafana, and Node Exporter
 
 Go to the project directory celestia_analysis/prometheus, if run you are running ubuntu from any cloud provider then you have public a IP. If you run from a local machine
-then you have an IP of localhost or 127.0.0.1. Provide your host IP in the prometheus.yml file instead of the placeholder (Insert-Your-IP). Write out and exit.
+then you have an IP of localhost or 127.0.0.1. 
+
+Provide your host IP in the prometheus.yml file instead of the placeholder (Insert-Your-IP). 
 
 `cd && cd celestia_analysis/prometheus && nano prometheus.yml`
+
+Write out and exit.
 
 Now you have to run all of the necessary containers in docker. Run this command and check the running containers:
 
