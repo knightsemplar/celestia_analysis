@@ -1,6 +1,6 @@
 # celestia_analysis
 
-This is a tool for setting up and performing analysis on a Celestia Light Node. It's targetted at the less saavy operator with the goal of providing a simple and easy to follow solution to running and analysing a node. 
+This is a tool for setting up and performing analysis on a Celestia Light Node. It's targetted at the less savvy operator with the goal of providing a simple and easy to follow solution to running and analysing a node. 
 
 **Software used:**
 
@@ -21,7 +21,7 @@ This is a tool for setting up and performing analysis on a Celestia Light Node. 
 
 # Setup Docker in Ubuntu
 Set up the repository
-1. Update the apt package index and install packages to allow apt to use a repository over HTTPS, add Docker’s official GPG key and set up the repository:
+Update the apt package index and install packages to allow apt to use a repository over HTTPS, add Docker’s official GPG key and set up the repository:
 
 ```
 sudo apt-get update && sudo apt-get install ca-certificates curl gnupg -y && sudo install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg && sudo chmod a+r /etc/apt/keyrings/docker.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -61,7 +61,7 @@ This will automatically set up and run a Celestia Light Node with a new wallet a
 
 Be aware: this can take a while. 
 
-For a more customised set up, please refer to [this article]([[url](https://open.substack.com/pub/solardefi/p/celestia-light-node-and-analysis?r=kui57&utm_campaign=post&utm_medium=web)]), Celestia docs, or a the repo in the resources section. 
+For a more customised set up, please refer to the Celestia docs or a the repo in the resources section. 
 
 
 # Setup OpenTelemetry Collector in Ubuntu
@@ -117,10 +117,12 @@ There will be three dashboards available to choose from, the first showing combi
 
 ![image](https://github.com/knightsemplar/celestia_analysis/assets/81700275/c824bd46-f92f-4010-b015-726f2e32d6bb)
 
+Here is a more [detailed article of the process]([url](https://solardefi.substack.com/](https://open.substack.com/pub/solardefi/p/celestia-light-node-and-analysis?r=kui57&utm_campaign=post&utm_medium=web)))
+
 ## References
 1. https://docs.docker.com/engine/install/ubuntu/
 2. https://github.com/GLCNI/celestia-node-scripts/tree/main/multi-network#readme
 3. https://github.com/GLCNI/celestia-node-scripts/blob/main/multi-network/monitoring/prom
 etheus/README.md
-4. https://solardefi.substack.com/
+4. https://github.com/P-OPSTeam/celestia-tools/tree/main/grafana
 
