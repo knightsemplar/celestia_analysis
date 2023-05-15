@@ -33,7 +33,7 @@ Downloads and installs Docker Compose binary.
 
 Adds the ubuntu user to the docker group to allow Docker commands without sudo.
 
-You may need to log out (`exit`) and log back in for the group membership to take effect.
+You will need to log out (`exit`) and log back in for the group membership to take effect.
 
 ```sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && sudo usermod -aG docker ubuntu```
 
