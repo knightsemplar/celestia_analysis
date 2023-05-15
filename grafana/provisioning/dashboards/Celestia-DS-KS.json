@@ -741,9 +741,19 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "continuous-purples"
+            "mode": "thresholds"
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "index": 0,
+                  "text": "✅"
+                }
+              },
+              "type": "value"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -774,13 +784,13 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
-            "max"
+            "lastNotNull"
           ],
           "fields": "",
           "limit": 1,
           "values": false
         },
-        "textMode": "auto"
+        "textMode": "value"
       },
       "pluginVersion": "9.4.10",
       "targets": [
@@ -797,7 +807,7 @@
           "refId": "A"
         }
       ],
-      "title": "If Synced = 0",
+      "title": "If Synced = Tick",
       "type": "stat"
     },
     {
@@ -1513,6 +1523,6 @@
   "timezone": "",
   "title": "Celestia DS KS",
   "uid": "2enmpKUVz",
-  "version": 4,
+  "version": 2,
   "weekStart": ""
 }
