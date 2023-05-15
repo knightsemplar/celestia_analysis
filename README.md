@@ -76,6 +76,14 @@ When the setup is completed successfully, you will see the output that the servi
 
 # Setup Prometheus, Grafana, and Node Exporter
 
+If you’re running ubuntu from any cloud provider then you will have a public IP. If running locally you have local host or an IP of 127.0.0.1. Provide that in the prometheus.yml file instead of the placeholder “Insert-Your-IP”
+
+```
+cd celestia_analysis && nano prometheus/prometheus.yml
+```
+
+Write out, save and exit.
+
 Now you have to run all of the necessary containers in docker. Run this command and check the running containers:
 
 ```
