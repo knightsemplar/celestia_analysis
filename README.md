@@ -117,7 +117,7 @@ There will be three dashboards available to choose from, the first showing combi
 
 ![image](https://github.com/knightsemplar/celestia_analysis/assets/81700275/c824bd46-f92f-4010-b015-726f2e32d6bb)
 
-Here is a more [detailed article of the process]([url](https://solardefi.substack.com/](https://open.substack.com/pub/solardefi/p/celestia-light-node-and-analysis?r=kui57&utm_campaign=post&utm_medium=web)))
+Here is a more [detailed article of the process](https://open.substack.com/pub/solardefi/p/celestia-light-node-and-analysis?r=kui57&utm_campaign=post&utm_medium=web)
 
 ## References
 1. https://docs.docker.com/engine/install/ubuntu/
